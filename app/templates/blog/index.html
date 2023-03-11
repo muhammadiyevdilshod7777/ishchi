@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+</head>
+<body>
+<h1>Ishchilar jadvali</h1>
+
+<table id="customers">
+  <tr>
+    <th>Ishchi ismi</th>
+    <th>Ishchi familiya</th>
+    <th>Telefon</th>
+  </tr>
+  {% for i in Ish %}
+  <tr>
+    <td>{{ i.ism }}</td>
+    <td>{{ i.familiya }}</td>
+    <td>{{ i.telfon_raqami }}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+</body>
+</html>
+<!-- 
+
+ 
+  <h1>
+    Ismi : {{ x.ism }}
+  </h1>
+  <h1>
+    familliya : {{ x.familliya }}
+  </h1>
+  <h1>
+    yili : {{ x.yili }}
+  </h1>
+  <h1>
+    telfon_raqami : {{ x.telfon_raqami }}
+  </h1>
+
